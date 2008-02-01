@@ -3,7 +3,7 @@ package Convert::Temperature;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -32,7 +32,7 @@ sub from_cel_to_fahr {
 
 sub from_fahr_to_kelvin{
     my $self = shift;
-    my $fahr;
+    my $fahr = shift;
 
     $self->{'res_kelvin'} = ($fahr + 459.67) / 1.8;
 
@@ -103,7 +103,7 @@ Version 0.01
   
   my $c = new Convert::Temperature();
 
-  my $res = $c->_from_fahr_to_cel('59'); => result in Celsius
+  my $res = $c->from_fahr_to_cel('59'); => result in Celsius
   ...
 
 =head1 FUNCTIONS
