@@ -3,7 +3,7 @@ package Convert::Temperature;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $class = shift;
@@ -84,6 +84,14 @@ sub from_reaumur_to_fahr {
     return $self->{'res_reaumur_fahr'};
 }
 
+sub extra {
+    my $self = shift;
+    my $extra = "To my Mom. Maria Luisa Mesquista (1954 - 2007)";
+
+    $self->{'extra'} = $extra;
+    return $self->{'extra'};
+}
+
 1;
 
 __END__
@@ -91,11 +99,11 @@ __END__
 
 =head1 NAME
 
-Convert::Temperature
+Convert::Temperature - Convert Temperatures
 
 =head1 VERSION
 
-Version 0.01
+Version 0.03
 
 =head1 SYNOPSIS
 

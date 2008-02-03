@@ -23,7 +23,7 @@ my $res = $c->from_cel_to_fahr('15');
 is($res, 59, 'Temperature is ok');
 
 my $res = $c->from_fahr_to_kelvin('59');
-is($res, 255.372222222222, 'Temperature is ok');
+is($res, 288.15, 'Temperature is ok');
 
 my $res = $c->from_kelvin_to_fahr('215');
 is($res, -72.67, 'Temperature is ok');
